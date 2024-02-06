@@ -110,8 +110,12 @@ def click_read_aloud():
         pyautogui.click(x, y)
         index = 1
 
-        while True and index < 300:
+        while True and index < 100:
             try:
+                pyautogui.click(x, y)
+                pyautogui.hotkey('ctrl', 'c')
+                if not pyperclip.paste():
+                    break
                 pyautogui.click(x, y)
                 # Get the current cursor position
                 x, y = pyautogui.position()
