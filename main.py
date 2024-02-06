@@ -66,7 +66,7 @@ def check_threads(p_x, p_y):
                     # print("------------------------------------------------------------------------------")
                     # print(line)
                     # print(th)
-                    check = write_data(th + (line.split("~")))
+                    check = write_data(th + (line.split(",")))
                     if not check:
                         with open('errors.txt', 'a') as file:
                             file.write("There is some error occurred during writing to output file")
@@ -110,7 +110,7 @@ def click_read_aloud():
         pyautogui.click(x, y)
         index = 1
 
-        while True:
+        while True and index < 300:
             try:
                 pyautogui.click(x, y)
                 # Get the current cursor position
@@ -146,7 +146,7 @@ def click_read_aloud():
 def main():
     try:
         # Path to your PDF file
-        file_path = r'C:\Users\mfarooq14\PycharmProjects\Find_Redundant_Q\input1.jps'
+        file_path = r'C:\Users\mfarooq14\PycharmProjects\Find_Redundant_Q\input.jps'
 
         # Open the PDF in Microsoft Edge
         open_jps_in_jprofiler(file_path)
