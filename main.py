@@ -79,7 +79,7 @@ def check_threads(p_x, p_y):
         return
 
 
-def click_read_aloud():
+def start_process():
     try:
         # Monitor & Locks
         read_aloud_button_coordinates = (100, 650)
@@ -157,7 +157,7 @@ def main():
 
         time.sleep(9)
 
-        click_read_aloud()
+        start_process()
         # Replace 'YourAppName' with the actual name or process name of the application you want to close
         app_name = 'jprofiler'
 
